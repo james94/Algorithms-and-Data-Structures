@@ -140,3 +140,4 @@ npm run build
 ## Further Reading
 
 - [Windows 10 Fall Creators Update - Installing Node.js on Windows Subsystem for Linux (WSL)](https://gist.github.com/noygal/6b7b1796a92d70e24e35f94b53722219)
+- [Webpack - React Express](http://www.react.express/webpack)
