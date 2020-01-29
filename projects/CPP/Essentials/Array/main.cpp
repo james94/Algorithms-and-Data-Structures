@@ -5,6 +5,7 @@ using std::endl;
 
 int main()
 {
+    cout << "*********** Array Basics Program ***********" << endl;
     // Declare Array
     int A[5];
 
@@ -16,5 +17,6 @@ int main()
     {
         cout << B[i] << " ";
     }
+    cout << endl;
     return 0;
 }
