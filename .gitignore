@@ -3,3 +3,5 @@ node_modules
 main
 package.json
 package-lock.json
+*.so
+*.o
