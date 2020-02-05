@@ -203,6 +203,7 @@ cppyy.gbl.display(ref_p)
 
 # Define basic pointers class and methods using cppyy
 cppyy.include('CPPLib/pointers.hpp')
+# TODO: Instead of explicit load of reflection library, use genreflex to implicitly load it
 # explicit loading of reflection library prevents use in (large scale) productiono
 cppyy.load_reflection_info("CPPLib/libpointers.so")
 cppyy.load_library("libpointers")
