@@ -1,12 +1,18 @@
 # Essential Python Concepts
 
-## Example Programs
+## Example Python Programs
 
-### [C-like Arrays using Lists](Array/main.py)
+### [Arrays using Lists](Array/main.py)
 
 **Further Reading**:
 
 - [Arrays vs Lists in Python](https://medium.com/@aakankshaws/arrays-vs-lists-in-python-db8b26ce5cc3)
+
+### [Functions](Functions/main.py)
+
+- [How to Define Functions in Python3](https://www.digitalocean.com/community/tutorials/how-to-define-functions-in-python-3)
+
+## Example Python Programs for C/C++ Developers
 
 ### [C-like Structures using Data Classes](Structures/main.py)
 
@@ -29,3 +35,5 @@
 
 - [cppyy: C++ bindings for PyPy](https://doc.pypy.org/en/release-2.6.x/cppyy.html)
     - Importing C++ shared libraries into cppyy
+
+### [Pointers To Structures]
