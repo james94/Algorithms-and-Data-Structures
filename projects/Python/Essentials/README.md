@@ -12,6 +12,14 @@
 
 - [How to Define Functions in Python3](https://www.digitalocean.com/community/tutorials/how-to-define-functions-in-python-3)
 
+### [Parameter Passing Methods](Parameter-Passing-Methods/main.py)
+
+- [Tricky Python II: Parameter Passing for Mutable & Immutable Objects](https://medium.com/@tyastropheus/tricky-python-ii-parameter-passing-for-mutable-immutable-objects-10e968cbda35)
+
+### [Array as Parameter](Array-As-Parameter/main.py)
+
+
+
 ## Example Python Programs for C/C++ Developers
 
 ### [C-like Structures using Data Classes](Structures/main.py)
