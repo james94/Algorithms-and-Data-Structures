@@ -7,5 +7,3 @@ In Python Essentials, you will implement 2 ways to use a pointer to point to a s
 **Makefile:** [Makefile](Makefile)
 
 ## Further Reading
-
-- [Tricky Python II: Parameter Passing for Mutable & Immutable Objects](https://medium.com/@tyastropheus/tricky-python-ii-parameter-passing-for-mutable-immutable-objects-10e968cbda35)
