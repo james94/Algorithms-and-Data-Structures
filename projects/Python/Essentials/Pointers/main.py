@@ -77,19 +77,20 @@ class Metrics(object):
             "patient_visits": 0,
             "monthly_charges": 0,
         }
-    # Use property decorator to access dict key values as if they were attributes
+
+    # Use property decorator to access dict key values as if they were attributes    
     @property
-    def patient_visits:
+    def patient_visits(self):
         return self._metrics["patient_visits"]
 
     @property
-    def monthly_charges:
+    def monthly_charges(self):
         return self._metrics["monthly_charges"]
 
-    def inc_patient_visits:
+    def inc_patient_visits(self):
         self._metrics["patient_visits"] += 1
     
-    def inc_monthly_charges:
+    def inc_monthly_charges(self):
         self._metrics["monthly_charges"] += 1
 
 # Since we are able to access these names as attributes means
