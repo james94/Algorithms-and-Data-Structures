@@ -2,6 +2,10 @@
 
 In Python Essentials, you will implement a C-like structure using Python Data Classes.
 
+**Code:** [main.py](main.py)
+
+**Makefile:** [Makefile](Makefile)
+
 ## Further Reading:
 
 - [Stackoverflow: C-like structres in Python](https://stackoverflow.com/questions/35988/c-like-structures-in-python)
