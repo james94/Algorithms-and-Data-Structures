@@ -1,4 +1,4 @@
-# Python Class
+# Class
 
 In Python Essentials, you will learn how to implement a class.
 
