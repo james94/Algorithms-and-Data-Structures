@@ -2,6 +2,9 @@
 
 In Python Essentials, you will learn how to implement functions.
 
+**Code:** [main.py](main.py)
+
+**Makefile:** [Makefile](Makefile)
 
 ## Further Reading
 
