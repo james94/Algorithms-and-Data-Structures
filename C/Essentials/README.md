@@ -8,7 +8,7 @@
 
 - [Pointers](Pointers/src/main.c)
 
-- [Pointer To Structures](Pointer-To-Structure/src/main.c)
+- [Pointer To Structures](Pointer-To-Structures/src/main.c)
 
 - [Functions](Functions/src/main.c)
 
