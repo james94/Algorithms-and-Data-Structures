@@ -7,3 +7,5 @@
 2. [Static vs Global Recursion](StaticGlobal/src/main.c)
 
 3. [Tree Recursion](Tree/src/main.c)
+
+4. [Indirect Recursion](Indirect/src/main.c)
