@@ -9,3 +9,5 @@
 3. [Tree Recursion](Tree/src/main.c)
 
 4. [Indirect Recursion](Indirect/src/main.c)
+
+5. [Nested Recursion](Nested/src/main.c)
