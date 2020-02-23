@@ -13,3 +13,5 @@
 5. [Nested Recursion](Nested/src/main.c)
 
 6. [Sum of Natural Number using Recursion](SumOfN/src/main.c)
+
+7. [Factorial Recursion](Factorial/src/main.c)
