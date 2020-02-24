@@ -17,3 +17,5 @@
 7. [Factorial Recursion](Factorial/src/main.c)
 
 8. [Power Recursion](Power/src/main.c)
+
+9. [Taylor Series using Recursion](TaylorSeries/src/main.c)
