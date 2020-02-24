@@ -181,7 +181,21 @@ The return value of `fun(5)` is
 <!--
 Step by step solution
 
-coming later
+Solution from lecture
+
+n = 1, fun(1) = 1
+n = 2, fun(2) = 1 + fun(1) * fun(1) = 1+1*1 = 2
+n = 3, fun(3) = 1 + fun(1) * fun(2) + fun(2) * fun(1)
+       fun(3) = 1 + 1 * 2 + 2 * 1 = 1+2+2 = 5
+n = 4, fun(4) = 1 + fun(1) * fun(3) + fun(2) * fun(2)
+                  + fun(3) * fun(1)
+       fun(4) = 1+(1*5)+(2*2)+(5*1) = 1+5+4+5 = 15
+n = 5, fun(5) = 1 + fun(1) * fun(4) + fun(2) * fun(3)
+                  + fun(3) * fun(2) + fun(4) * fun(1)
+        fun(5) = 1 + (1*15) + (2*5) + (5*2) + (15*1)
+        fun(5) = 1 + 15 + 10 + 10 + 15 = 51
+
+answer = 51 when fun(5)
 -->
 
 ## Question 5
@@ -208,5 +222,32 @@ void main()
 <!--
 Step by step solution
 
-coming later
+count(3): d = 1, 
+output: 3,1
+d++, so d = 2
+n is > 1, so count(2)
+upon return
+call printf(d)
+output: 3,1,2,2,1,3,4,4,4
+exit function
+
+count(2): d = 2,
+output: 3,1,2,2
+d++, so d = 3
+n is > 1, so count(1)
+upon return
+call printf(d)
+output: 3,1,2,2,1,3,4,4
+exit function
+
+count(1): d = 3
+output: 3,1,2,2,1,3
+d++, so d = 4
+n is not > 1, so call printf(d)
+
+output: 3,1,2,2,1,3,4
+exit function
+
+
+answer output: 3,1,2,2,1,3,4,4,4
 -->
