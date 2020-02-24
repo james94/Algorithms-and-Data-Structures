@@ -18,4 +18,6 @@
 
 8. [Power Recursion](Power/src/main.c)
 
-9. [Taylor Series using Recursion](TaylorSeries/src/main.c)
+9. [Taylor Series Recursion](TaylorSeries/src/main.c)
+
+10. [Taylor Series Recursion using Horner's Rule](HornersRuleTS/src/main.c)
