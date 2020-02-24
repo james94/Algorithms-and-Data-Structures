@@ -37,6 +37,6 @@ int FasterPower(int m, int n)
 int main()
 {
     int r = FasterPower(9, 3);
-    printf("%d\n", r);
+    printf("%d ", r);
     return 0;
 }
