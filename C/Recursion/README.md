@@ -15,3 +15,5 @@
 6. [Sum of Natural Number using Recursion](SumOfN/src/main.c)
 
 7. [Factorial Recursion](Factorial/src/main.c)
+
+8. [Power Recursion](Power/src/main.c)
