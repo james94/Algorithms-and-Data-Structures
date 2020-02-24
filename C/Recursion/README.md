@@ -23,3 +23,5 @@
 10. [Taylor Series Recursion using Horner's Rule](HornersRuleTS/src/main.c)
 
 11. [Fibonacci Series using Recursion - Memoization](Fibonacci/src/main.c)
+
+12. [Combination Formula using Recursion - Pascal's Triangle](Combination/src/main.c)
