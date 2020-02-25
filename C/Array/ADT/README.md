@@ -29,3 +29,12 @@
 8. [Reverse()](Reverse/src/main.c)
 
 9. [Shift()/Rotate()](ShiftRotate/src/main.c)
+
+<!--
+Shell and Perl Code to help with redundant work:
+mkdir -p Insert/src/ && touch Insert/src/main.c
+cp Display/*.sh Insert/
+cp Display/*.txt Insert/
+
+perl -pi -e 's/DisplayArray/Insert/g' Insert/CMakeLists.txt
+-->
