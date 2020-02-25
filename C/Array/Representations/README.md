@@ -6,3 +6,4 @@
 
 2. [Increase Array Size](IncreaseArraySize/src/main.c)
 
+3. [2D Arrays](2DArray/src/main.c)
