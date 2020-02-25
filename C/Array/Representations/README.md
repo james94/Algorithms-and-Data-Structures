@@ -10,6 +10,8 @@
 
 4. [2D Arrays](2DArray/src/main.c)
 
+5. [Arrays Representation Quiz](ArrayRepQuiz/README.md)
+
 <!--
 Shell and Perl Code to help with redundant work:
 mkdir -p Declaration/src/ && touch Declaration/src/main.c
