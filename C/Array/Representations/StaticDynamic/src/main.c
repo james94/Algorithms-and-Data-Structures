@@ -14,7 +14,7 @@ int main()
     int i;
 
     // p points to address of contiguous block of memory (array)
-    // allocated for 5 int spaces in heap
+    // dynamically allocated for 5 int spaces in heap
     p = (int *)malloc(5*sizeof(int));
     p[0] = 3;
     p[1] = 5;
