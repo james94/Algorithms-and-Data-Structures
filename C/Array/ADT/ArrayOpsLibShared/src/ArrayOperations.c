@@ -21,6 +21,8 @@ void Display(struct Array arr)
 }
 
 // Insert new element at the end of array
+// Time Complexity: O(1). 
+// Work: f(n) = 2; f(n) = 2n^0; O(n^0) = O(1).
 void Append(struct Array *arr, int x)
 {
     if(arr->length < arr->size)
@@ -30,6 +32,7 @@ void Append(struct Array *arr, int x)
 }
 
 // Insert new element at index
+// Time Complexity: Best O(1); Worst O(n) 
 void Insert(struct Array *arr, int index, int x)
 {
     int i;
