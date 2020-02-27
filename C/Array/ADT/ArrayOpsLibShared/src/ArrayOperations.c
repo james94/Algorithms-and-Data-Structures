@@ -48,6 +48,7 @@ void Insert(struct Array *arr, int index, int x)
 }
 
 // Delete element from array
+// Time Complexity: Best O(1), Worst O(n)
 int Delete(struct Array *arr, int index)
 {
     int x = 0;
