@@ -18,7 +18,8 @@
 
 3. [Delete(index)](UsesArrayOpsLib/Delete/src/main.c)
 
-4. [Search(x)](UsesArrayOpsLib/Search/src/main.c)
+4. [Search(x)](UsesArrayOpsLib/Search/)
+    - [LinearSearch](UsesArrayOpsLib/Search/LinearSearch/src/main.c)
 
 5. [Get(x)](UsesArrayOpsLib/Get/src/main.c)
 
