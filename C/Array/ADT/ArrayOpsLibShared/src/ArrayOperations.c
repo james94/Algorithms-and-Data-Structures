@@ -135,3 +135,56 @@ int LinearSearch3(struct Array *arr, int key)
 // Procedure: Keep dividing total num of elements by
 // 2 until one element is left, either found or not
 
+// Iterative Binary Search
+int BinarySearch(struct Array arr, int key)
+{
+    int l, mid, h;
+    l = 0;
+    h = arr.length - 1;
+
+    while(l <= h)
+    {
+        mid = (l + h) / 2;
+        
+        if(key == arr.A[mid])
+        {
+            return mid;
+        }
+        // key is on left side
+        else if(key < arr.A[mid])
+        {
+            h = mid - 1;
+        } // key is on right side
+        else
+        {
+            l = mid + 1;
+        }
+    }
+    // returns -1 when key element not found
+    return -1;
+}
+
+// Recursive Binary Search
+int RBinSearch(int a[], int l, int h, int key)
+{
+    int mid;
+
+    if(l <= h)
+    {
+        mid = (l + h) / 2;
+        if(key == a[mid])
+        {
+            return mid;
+        }
+        // key is on left side
+        else if(key < a[mid])
+        {
+            return RBinSearch(a, l, mid-1, key);
+        } // key is on right side
+        else
+        {
+            return RBinSearch(a, mid+1, h, key);
+        }
+    }
+    return -1;
+}

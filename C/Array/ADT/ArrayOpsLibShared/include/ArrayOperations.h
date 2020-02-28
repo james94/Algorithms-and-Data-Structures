@@ -49,3 +49,9 @@ int LinearSearch3(struct Array *arr, int key);
 
 // Binary Search for element in array by dividing total num of 
 // elements by 2 until one element is left, either found or not
+
+// Iterative Binary Search
+int BinarySearch(struct Array arr, int key);
+
+// Recursive Binary Search
+int RBinSearch(int a[], int l, int h, int key);
