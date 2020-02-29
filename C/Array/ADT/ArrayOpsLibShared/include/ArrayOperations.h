@@ -55,3 +55,24 @@ int BinarySearch(struct Array arr, int key);
 
 // Recursive Binary Search
 int RBinSearch(int a[], int l, int h, int key);
+
+// Get a particular element at index
+int Get(struct Array arr, int index);
+
+// Set a particular value at index
+void Set(struct Array *arr, int index, int x);
+
+// Max finds maximum out of the array elements
+int Max(struct Array arr);
+
+// Min finds minimum element in array
+int Min(struct Array arr);
+
+// Sum calculates total of all elements adds them together
+int Sum(struct Array arr);
+
+// Recusrive Sum
+int RSum(struct Array arr, int n);
+
+// Average calculates total sum divided total number of elements
+float Avg(struct Array arr);

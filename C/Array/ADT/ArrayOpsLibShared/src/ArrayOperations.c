@@ -188,3 +188,89 @@ int RBinSearch(int a[], int l, int h, int key)
     }
     return -1;
 }
+
+// Get
+// Returns element at particular index
+// Time Complexity: O(1)
+int Get(struct Array arr, int index)
+{
+    if(index >= 0 && index < arr.length)
+    {
+        return arr.A[index];
+    }
+    return -1;
+}
+
+// Set
+// Replace value at a particular index
+// Time Complexity: O(1)
+void Set(struct Array *arr, int index, int x)
+{
+    if(index >= 0 && index < arr->length)
+    {
+        arr->A[index] = x;
+    }
+}
+
+// Max finds maximum element in array
+// For unsorted array, must check all elements
+// For sorted array, check either first or last element
+// Time Complexity: O(n)
+int Max(struct Array arr)
+{
+    int max = arr.A[0];
+    for(int i = 0; i < arr.length; i++)
+    {
+        if(arr.A[i] > max)
+        {
+            max = arr.A[i];
+        }
+    }
+    return max;
+}
+
+// Min finds minimum element in array
+// Time Complexity: O(n)
+int Min(struct Array arr)
+{
+    int min = arr.A[0];
+    for(int i = 0; i < arr.length; i++)
+    {
+        if(arr.A[i] < min)
+        {
+            min = arr.A[i];
+        }
+    }
+    return min;
+}
+
+// Iterative Sum calculates total of all elements adds them together
+// Time Complexity: O(n)
+int Sum(struct Array arr)
+{
+    int sum = 0;
+    for(int i = 0; i < arr.length; i++)
+    {
+        sum += arr.A[i];
+    }
+    return sum;
+}
+
+// Recusrive Sum
+int RSum(struct Array arr, int n)
+{
+    if(n < 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return RSum(arr, n-1) + arr.A[n];
+    }
+}
+
+// Average calculates total sum divided total number of elements
+float Avg(struct Array arr)
+{
+    return (float)Sum(arr)/arr.length;
+}
