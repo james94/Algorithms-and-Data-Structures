@@ -100,3 +100,12 @@ void RightShift(struct Array *arr, int n);
 
 // Right Rotate
 void RightRotate(struct Array *arr, int n);
+
+// Insert new element such that it is inserted in it's sorted position
+void InsertSort(struct Array *arr, int x);
+
+// Check whether an array is sorted or not
+bool isSorted(struct Array arr);
+
+// Arrange Negative and Positives on separate sides
+void Rearrange(struct Array *arr);

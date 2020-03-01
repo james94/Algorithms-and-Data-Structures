@@ -393,3 +393,66 @@ void RightRotate(struct Array *arr, int n)
         n--;
     }
 }
+
+// Insert in a Sorted Array
+// Checking if an Array is Sorted
+// Arranging all the elements on left side and right side
+
+// Insert new element such that it is inserted in it's sorted position
+void InsertSort(struct Array *arr, int x)
+{
+    // stop array insert sort if there is no free space
+    if(arr->length == arr->size)
+    {
+        return;
+    }
+    int i;
+    for(i = arr->length-1; i >= 0 && arr->A[i] > x; i--)
+    {
+        arr->A[i+1] = arr->A[i];
+    }
+    arr->A[i+1] = x;
+    arr->length++;
+}
+
+// Check whether an array is sorted or not
+// If every element is smaller than the next number, then array is sorted
+// Time Complexity: Best O(1), Worst O(n)
+bool isSorted(struct Array arr)
+{
+    for(int i = 0; i < arr.length-1; i++)
+    {
+        if(arr.A[i] > arr.A[i+1])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Arrange Negative and Positives on separate sides
+// We have an array with mixed positive and negative numbers
+// We want to bring negative numbers on left hand side and positive
+// numbers on right hand side
+// Time Complexity: O(n)
+void Rearrange(struct Array *arr)
+{
+    int i = 0;
+    int j = arr->length-1;
+    while(i < j)
+    {
+        // increment while A[i] is negative, break when it's positive
+        while(arr->A[i] < 0)
+        {
+            i++;
+        } // decrement while A[j] is positive, break when it's negative
+        while(arr->A[j] >= 0)
+        {
+            j--;
+        } // if index i is not past index j, swap pos and neg element
+        if(i < j)
+        {
+            swap(&arr->A[i], &arr->A[j]);
+        }
+    }
+}
