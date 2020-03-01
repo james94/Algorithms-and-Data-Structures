@@ -274,3 +274,122 @@ float Avg(struct Array arr)
 {
     return (float)Sum(arr)/arr.length;
 }
+
+// 1st Method for Reverse Copy
+// Reverse copy from array A to B, then copy B to A
+// Time Complexity: O(n)
+// Copy from array A to B takes n time
+// Copy from B to A takes n time
+void Reverse1(struct Array *arr)
+{
+    int *arrB;
+    arrB = (int *)malloc(arr->length*sizeof(int));
+
+    // Reverse copy arr->A into arrB
+    for(int i = arr->length-1, j = 0; i >= 0; i--, j++)
+    {
+        arrB[j] = arr->A[i];
+    }
+    // Copy arrB into arr->A
+    for(int i = 0; i < arr->length; i++)
+    {
+        arr->A[i] = arrB[i];
+    }
+}
+
+// 2nd Method for Reverse Copy
+// Scan from two ends of an array and swap the elements
+// until scan has reached middle of array
+// Stop when i and j have reached the same place or when i > j
+// Time Complexity: O(n)
+void Reverse2(struct Array *arr)
+{
+    for(int i = 0, j = arr->length-1; i < j; i++, j--)
+    {
+        swap(&arr->A[i], &arr->A[j]);
+    }
+}
+
+// Left Shift
+// Shift all elements by n time(s) to left, lose first element, last element becomes 0
+// Time Complexity: O(n)
+void LeftShift(struct Array *arr, int n)
+{
+    // number of times to left shift
+    while(n > 0)
+    {
+        // 1 left shift
+        // ex: 2,3,4,5,6 = 3,4,5,6,0
+        for(int i = 0; i+1 < arr->length; i++)
+        {
+            arr->A[i] = arr->A[i+1];    
+        }
+        arr->A[arr->length-1] = 0;
+        // decrement
+        n--;
+    }
+}
+
+// Left Rotate
+// Similar to left shift, but instead of first element 
+// being removed, it is placed at the last element
+// Time Complexity: O(n)
+// Ex: LED Display boards have text that is scrolling aka rotating
+void LeftRotate(struct Array *arr, int n)
+{
+    // number of times to left rotate
+    while(n > 0)
+    {
+        // 1 left rotate
+        // ex: 2,3,4,5,6 = 3,4,5,6,0
+        int temp = arr->A[0];
+        for(int i = 0; i+1 < arr->length; i++)
+        {
+            arr->A[i] = arr->A[i+1];
+        }
+        arr->A[arr->length-1] = temp;
+        // decrement
+        n--;
+    }
+}
+
+// Right Shift
+// Shift all elements by n time(s) to right, lose last element, first element becomes 0
+// Time Complexity: O(n)
+void RightShift(struct Array *arr, int n)
+{
+    // number of times to right shift
+    while(n > 0)
+    {
+        // 1 right shift
+        // ex: 2,3,4,5,6 = 0,2,3,4,5
+        for(int i = arr->length-1; i-1 >= 0; i--)
+        {
+            arr->A[i] = arr->A[i-1];    
+        }
+        arr->A[0] = 0;
+        // decrement
+        n--;
+    }
+}
+
+// Right Rotate
+// Similar to right shift, but instead of last element 
+// being removed, it is copied to the first element
+void RightRotate(struct Array *arr, int n)
+{
+    // number of times to right shift
+    while(n > 0)
+    {
+        // 1 right shift
+        // ex: 2,3,4,5,6 = 6,2,3,4,5
+        int temp = arr->A[arr->length-1];
+        for(int i = arr->length-1; i-1 >= 0; i--)
+        {
+            arr->A[i] = arr->A[i-1];    
+        }
+        arr->A[0] = temp;
+        // decrement
+        n--;
+    }
+}

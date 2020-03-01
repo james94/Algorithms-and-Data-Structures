@@ -71,8 +71,32 @@ int Min(struct Array arr);
 // Sum calculates total of all elements adds them together
 int Sum(struct Array arr);
 
-// Recusrive Sum
+// Recursive Sum
 int RSum(struct Array arr, int n);
 
 // Average calculates total sum divided total number of elements
 float Avg(struct Array arr);
+
+// 1st Method for Reverse Copy
+// Reverse copy from array A to B, then copy B to A
+void Reverse1(struct Array *arr);
+
+// 2nd Method for Reverse Copy
+// Scan from two ends of an array, swap the elements until 
+// scan has reached middle of array
+void Reverse2(struct Array *arr);
+
+// Left Shift
+// Shift all elements by 1 to left, lose first element
+void LeftShift(struct Array *arr, int n);
+
+// Left Rotate
+// Similar to left shift, but instead of first element 
+// being removed, it is placed at the last element
+void LeftRotate(struct Array *arr, int n);
+
+// Right Shift
+void RightShift(struct Array *arr, int n);
+
+// Right Rotate
+void RightRotate(struct Array *arr, int n);
