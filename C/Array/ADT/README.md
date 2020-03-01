@@ -20,16 +20,17 @@
 
 4. [Search(x)](UsesArrayOpsLib/Search/)
     - [LinearSearch](UsesArrayOpsLib/Search/LinearSearch/src/main.c)
+    - [BinarySearch](UsesArrayOpsLib/Search/BinarySearch/src/main.c)
 
-5. [Get(x)](UsesArrayOpsLib/Get/src/main.c)
+5. [Get(x)](UsesArrayOpsLib/GetSetMaxMinSum/src/main.c)
 
-6. [Set(index, x)](UsesArrayOpsLib/Set/src/main.c)
+6. [Set(index, x)](UsesArrayOpsLib/GetSetMaxMinSum/src/main.c)
 
-7. [Max()/Min()](UsesArrayOpsLib/MaxMin/src/main.c)
+7. [Max(),Min(),Sum()](UsesArrayOpsLib/GetSetMaxMinSum/src/main.c)
 
-8. [Reverse()](UsesArrayOpsLib/Reverse/src/main.c)
+8. [Reverse()](UsesArrayOpsLib/ReverseShiftRotate/src/main.c)
 
-9. [Shift()/Rotate()](UsesArrayOpsLib/ShiftRotate/src/main.c)
+9. [Shift(),Rotate()](UsesArrayOpsLib/ReverseShiftRotate/src/main.c)
 
 <!--
 Shell and Perl Code to help with redundant work:
