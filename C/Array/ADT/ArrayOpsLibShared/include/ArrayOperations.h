@@ -11,9 +11,15 @@ struct DynArray
 };
 
 // Static Array Structure
+// struct Array
+// {
+//     int A[10]; // array of fixed size 20
+//     int size;
+//     int length; // number of elements inside array
+// };
 struct Array
 {
-    int A[10]; // array of fixed size 20
+    int *A; // array of fixed size 20
     int size;
     int length; // number of elements inside array
 };
