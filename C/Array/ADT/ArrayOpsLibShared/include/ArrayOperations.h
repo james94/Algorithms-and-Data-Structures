@@ -112,3 +112,18 @@ void Rearrange(struct Array *arr);
 
 // Merge two sorted arrays into one sorted array 
 struct Array* Merge(struct Array *arr1, struct Array *arr2);
+
+// Union uses Merge to combine two sorted arrays into single
+// array without duplicates
+struct Array* Union(struct Array *arr1, struct Array *arr2);
+
+// Intersection uses Merge to combine two sorted arrays into single
+// array with only duplicates.
+struct Array* Intersection(struct Array *arr1, struct Array *arr2);
+
+// Difference uses Merge to copy sorted array A elements into array C
+// that are NOT present in array B. 
+struct Array* Difference(struct Array *arr1, struct Array *arr2);
+
+// Set uses Binary Search to know whether an element belongs to a Set or Not.
+int SetMembership(struct Array arr, int key);

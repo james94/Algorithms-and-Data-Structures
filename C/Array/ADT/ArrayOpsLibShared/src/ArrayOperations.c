@@ -501,3 +501,204 @@ struct Array* Merge(struct Array *arr1, struct Array *arr2)
     // Array struct is written in heap, return arr3 pointer
     return arr3;
 }
+
+// Set Operations
+
+// Union
+// Copy all elements and duplicates one time between arr1 and arr2 into arr3
+
+// TODO: Union (Unsorted Arrays)
+// Combine two unsorted arrays into single array without duplicates
+// Store arr1 into arr3. Search if arr2 element is in
+// arr1 and if not, store it into arr3. Do this
+// procedure with arr2 until array ends
+// Time Complexity: O(n^2)
+// Steps: m + m*n. Replace m with n: n + n*n. 
+// Simplified: n + n^2 = n^2
+
+// Union (Sorted Arrays)
+// Apply Merge-like operation to combine two sorted arrays into single
+// array without duplicates. Minor change to Merge is if arr1 and arr2
+// element we are currently on is the same, copy element only once into
+// arr3. Then increment pointer to next element in arr1 and arr2.
+// Time Complexity: O(n)
+// Steps: O(m+n). Replace m with n, so O(n+n) = O(2n) = O(n)
+struct Array* Union(struct Array *arr1, struct Array *arr2)
+{
+    int i = 0, j = 0, k = 0;
+    // Create an array pointer in heap of size array
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array)); 
+
+    // Compare elements in arr1 with arr2. Copy smallest element into arr3
+    // Keep comparing until one of the arrays ends
+    while(i < arr1->length && j < arr2->length)
+    {
+        if(arr1->A[i] < arr2->A[j])
+        {
+            arr3->A[k++] = arr1->A[i++];
+        }
+        else if(arr2->A[j] < arr1->A[i])
+        {
+            arr3->A[k++] = arr2->A[j++];
+        }
+        else
+        {
+            arr3->A[k++] = arr1->A[i++];
+            j++;
+        }
+    }
+    // Copy any remaining elements from both arrays into arr3
+    for(; i < arr1->length; i++)
+    {
+        arr3->A[k++] = arr1->A[i++];
+    }
+    for(; j < arr2->length; j++)
+    {
+        arr3->A[k++] = arr2->A[j++];
+    }
+    arr3->length = k;
+    arr3->size = 10;
+
+    // Array struct is written in heap, return arr3 pointer
+    return arr3;
+}
+
+// Intersection
+// Copy only duplicates between arr1 and arr2 into arr3
+
+// TODO: Intersection (Unsorted Arrays)
+// Take common elements of arr1 and arr2 and store them into arr3
+// While copying arr1 elements into arr3, check if they are present
+// in arr2, if they are present, then copy them, else don't copy them.
+// Time Complexity: O(n^2)
+// Steps: O(n*m). Replace m with n to write single letter. O(n*n) = O(n^2).
+
+// Intersection (Sorted Arrays)
+// Apply Merge-like operation to combine two sorted arrays into single
+// array with only duplicates. Minor change to Merge is if arr1 and arr2
+// element we are currently on is different, don't copy element into arr3.
+// If arr1 and arr2 element we are on is the same, copy element into arr3.
+// Reminder: with Merge we ask is A's element < B, if true, don't copy it to C.
+// Time Complexity: O(n)
+// Steps: O(m+n). Replace m with n, so O(n+n) = O(2n) = O(n)
+struct Array* Intersection(struct Array *arr1, struct Array *arr2)
+{
+    int i = 0, j = 0, k = 0;
+    // Create an array pointer in heap of size array
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array)); 
+
+    // Compare elements in arr1 with arr2. Copy smallest element into arr3
+    // Keep comparing until one of the arrays ends
+    while(i < arr1->length && j < arr2->length)
+    {
+        if(arr1->A[i] < arr2->A[j])
+        {
+            i++;
+        }
+        else if(arr2->A[j] < arr1->A[i])
+        {
+            j++;
+        }
+        else if(arr1->A[i] == arr2->A[j])
+        {
+            arr3->A[k++] = arr1->A[i++];
+            j++;
+        }
+    }
+
+    arr3->length = k;
+    arr3->size = 10;
+
+    // Array struct is written in heap, return arr3 pointer
+    return arr3;
+}
+
+// Difference: A - B aka arr1 - arr2
+
+// TODO: Difference (Unsorted Arrays)
+// A - B means we want all those elements which are in A that are NOT
+// in B. So, subtract the common elements between A and B and take only
+// those elements that are only in A, not in B at all.
+// With each element we look at in A, check is it present in B, if true,
+// then don't copy it in C. Else if false, copy it into C.
+// Time Complexity: O(n^2)
+// Steps: O(n*m). Replace m with n to write single letter. O(n*n) = O(n^2).
+
+// Difference (Sorted Arrays)
+// Apply Merge-like operation to copy sorted array A elements into array C
+// that are NOT present in array B. Minor change to Merge is if A and B
+// element we are currently on is the same, don't copy element into C.
+// If A and B element we are on is different, copy A's element into C.
+// Reminder: with Merge we ask is A's element < B, if true, copy it to C.
+// Time Complexity: O(n)
+// Steps: O(m+n). Replace m with n, so O(n+n) = O(2n) = O(n)
+struct Array* Difference(struct Array *arr1, struct Array *arr2)
+{
+    int i = 0, j = 0, k = 0;
+    // Create an array pointer in heap of size array
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array)); 
+
+    // Compare elements in arr1 with arr2. Copy smallest element into arr3
+    // Keep comparing until one of the arrays ends
+    while(i < arr1->length && j < arr2->length)
+    {
+        // Only elements in arr1 are copied to arr3
+        if(arr1->A[i] < arr2->A[j])
+        {
+            arr3->A[k++] = arr1->A[i++];
+        }// second arr2 elements are skipped
+        else if(arr2->A[j] < arr1->A[i])
+        {
+            j++;
+        } // if both arr1 and arr2 elements are equal, skip both
+        else
+        {
+            i++;
+            j++;
+        }
+    }
+    // Copy any remaining elements from arr1 into arr3
+    for(; i < arr1->length; i++)
+    {
+        arr3->A[k++] = arr1->A[i++];
+    }
+
+    arr3->length = k;
+    arr3->size = 10;
+
+    // Array struct is written in heap, return arr3 pointer
+    return arr3;
+}
+
+// Set Membership Operation
+// To know whether an element belongs to a Set or Not
+// Like 10 belongs to set A or not, yes it is there, so it belongs to set A
+// So, Set Membership is the SAME as searching. I chose to use Binary Search.
+// Set uses Binary Search to know whether an element belongs to a Set or Not.
+int SetMembership(struct Array arr, int key)
+{
+    int l, mid, h;
+    l = 0;
+    h = arr.length - 1;
+
+    while(l <= h)
+    {
+        mid = (l + h) / 2;
+        
+        if(key == arr.A[mid])
+        {
+            return mid;
+        }
+        // key is on left side
+        else if(key < arr.A[mid])
+        {
+            h = mid - 1;
+        } // key is on right side
+        else
+        {
+            l = mid + 1;
+        }
+    }
+    // returns -1 when key element not found
+    return -1;
+}
