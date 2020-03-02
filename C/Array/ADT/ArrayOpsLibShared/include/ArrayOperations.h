@@ -109,3 +109,6 @@ bool isSorted(struct Array arr);
 
 // Arrange Negative and Positives on separate sides
 void Rearrange(struct Array *arr);
+
+// Merge two sorted arrays into one sorted array 
+struct Array* Merge(struct Array *arr1, struct Array *arr2);

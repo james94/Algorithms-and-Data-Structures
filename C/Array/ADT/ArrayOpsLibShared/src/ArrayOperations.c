@@ -398,6 +398,7 @@ void RightRotate(struct Array *arr, int n)
 // Checking if an Array is Sorted
 // Arranging all the elements on left side and right side
 
+// InsertSort
 // Insert new element such that it is inserted in it's sorted position
 void InsertSort(struct Array *arr, int x)
 {
@@ -415,6 +416,7 @@ void InsertSort(struct Array *arr, int x)
     arr->length++;
 }
 
+// isSorted
 // Check whether an array is sorted or not
 // If every element is smaller than the next number, then array is sorted
 // Time Complexity: Best O(1), Worst O(n)
@@ -430,6 +432,7 @@ bool isSorted(struct Array arr)
     return true;
 }
 
+// Rearrange
 // Arrange Negative and Positives on separate sides
 // We have an array with mixed positive and negative numbers
 // We want to bring negative numbers on left hand side and positive
@@ -455,4 +458,46 @@ void Rearrange(struct Array *arr)
             swap(&arr->A[i], &arr->A[j]);
         }
     }
+}
+
+// Merge
+// Time Complexity: O(m + n)
+// Merge two sorted arrays into one sorted array 
+// Compare array A[i] with B[j], whichever is the smaller copy it into C[k]
+// Move to next element of input array, move to next element index of res array
+// Keep comparing A[i] with B[j] until one of the arrays ends, then in the
+// other array copy the remaining elements into the res array
+struct Array* Merge(struct Array *arr1, struct Array *arr2)
+{
+    int i = 0, j = 0, k = 0;
+    // Create an array pointer in heap of size array
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array)); 
+
+    // Compare elements in arr1 with arr2. Copy smallest element into arr3
+    // Keep comparing until one of the arrays ends
+    while(i < arr1->length && j < arr2->length)
+    {
+        if(arr1->A[i] < arr2->A[j])
+        {
+            arr3->A[k++] = arr1->A[i++];
+        }
+        else
+        {
+            arr3->A[k++] = arr2->A[j++];
+        }
+    }
+    // Copy any remaining elements from both arrays into arr3
+    for(; i < arr1->length; i++)
+    {
+        arr3->A[k++] = arr1->A[i++];
+    }
+    for(; j < arr2->length; j++)
+    {
+        arr3->A[k++] = arr2->A[j++];
+    }
+    arr3->length = arr1->length + arr2->length;
+    arr3->size = 10;
+
+    // Array struct is written in heap, return arr3 pointer
+    return arr3;
 }
