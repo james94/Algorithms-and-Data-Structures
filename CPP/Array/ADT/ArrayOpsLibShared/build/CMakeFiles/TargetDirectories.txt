@@ -1,0 +1,7 @@
+/mnt/c/Users/james/Development/GitHub/james94/Data-Structures-and-Algorithms/CPP/Array/ADT/ArrayOpsLibShared/build/CMakeFiles/install/strip.dir
+/mnt/c/Users/james/Development/GitHub/james94/Data-Structures-and-Algorithms/CPP/Array/ADT/ArrayOpsLibShared/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/james/Development/GitHub/james94/Data-Structures-and-Algorithms/CPP/Array/ADT/ArrayOpsLibShared/build/CMakeFiles/ArrayOperations.dir
+/mnt/c/Users/james/Development/GitHub/james94/Data-Structures-and-Algorithms/CPP/Array/ADT/ArrayOpsLibShared/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/james/Development/GitHub/james94/Data-Structures-and-Algorithms/CPP/Array/ADT/ArrayOpsLibShared/build/CMakeFiles/list_install_components.dir
+/mnt/c/Users/james/Development/GitHub/james94/Data-Structures-and-Algorithms/CPP/Array/ADT/ArrayOpsLibShared/build/CMakeFiles/install/local.dir
+/mnt/c/Users/james/Development/GitHub/james94/Data-Structures-and-Algorithms/CPP/Array/ADT/ArrayOpsLibShared/build/CMakeFiles/install.dir
