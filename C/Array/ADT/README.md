@@ -32,6 +32,16 @@
 
 9. [Shift(),Rotate()](UsesArrayOpsLib/ReverseShiftRotate/src/main.c)
 
+10. [InsertSort(), isSorted(), Rearrange()](UsesArrayOpsLib/InsertSortRearrange/src/main.c)
+
+11. [Merge(arr1, arr2)](UsesArrayOpsLib/Merge/src/main.c)
+
+12. [Union(arr1, arr2)](UsesArrayOpsLib/UnionIntersectDiffer/src/main.c)
+
+13. [Intersection(arr1, arr2)](UsesArrayOpsLib/UnionIntersectDiffer/src/main.c)
+
+14. [Difference(arr1, arr2)](UsesArrayOpsLib/UnionIntersectDiffer/src/main.c)
+
 <!--
 Shell and Perl Code to help with redundant work:
 mkdir -p Insert/src/ && touch Insert/src/main.c
