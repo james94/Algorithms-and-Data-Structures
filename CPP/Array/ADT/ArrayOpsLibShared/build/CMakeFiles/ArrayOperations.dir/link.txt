@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libArrayOperations.so -o libArrayOperations.so CMakeFiles/ArrayOperations.dir/src/ArrayOperations.cpp.o 
