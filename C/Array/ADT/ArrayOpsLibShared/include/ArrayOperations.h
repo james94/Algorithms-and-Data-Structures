@@ -1,3 +1,6 @@
+#ifndef ARRAY_H
+#define ARRAY_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -133,3 +136,5 @@ struct Array* Difference(struct Array *arr1, struct Array *arr2);
 
 // Set uses Binary Search to know whether an element belongs to a Set or Not.
 int SetMembership(struct Array arr, int key);
+
+#endif
