@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.4)
-# Set project name to Functions C/C++ enabled default
-project(Functions)
+# Set project name to ParameterPassingMethods C/C++ enabled default
+project(ParameterPassingMethods)
 
 # Manually add the sources using the set command
 set(SOURCES src/main.cpp)
