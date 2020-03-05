@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.4)
-# Set project name to BasicArray C/C++ enabled default
-project(BasicArray)
+# Set project name to ArrayAsParameter C/C++ enabled default
+project(ArrayAsParameter)
 
 # Manually add the sources using the set command
 set(SOURCES src/main.cpp)
