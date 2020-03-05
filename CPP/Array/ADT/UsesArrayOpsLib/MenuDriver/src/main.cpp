@@ -37,7 +37,7 @@ int main()
             case 2: cout << "Enter index ";
                 cin >> index;
                 x = arr1->Delete(index);
-                cout << "Deleted Element is " << index << "\n";
+                cout << "Deleted Element is " << x << "\n";
                 break;
             case 3: cout << "Enter element to search ";
                 cin >> x;
