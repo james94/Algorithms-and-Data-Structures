@@ -754,8 +754,8 @@ void FindMissingElements(struct Array arr)
 // Take an array equal to the max element you have in the sequence that is
 // the size. Ex: 12 is largest element in first array, then size of new array
 // is 12. The first array will be traversed, each element will be looked up in
-// in the hash table, then 0 will be changed to 1. We come back to hash table
-// traverse it to look for the hash table's elements that equal 0, those are the
+// in the Hash Table, then 0 will be changed to 1. We come back to Hash Table
+// traverse it to look for the Hash Table's elements that equal 0, those are the
 // missing element(s)
 // Time Complexity: O(n)
 void FindMissingElements2(struct Array arr)
@@ -763,16 +763,16 @@ void FindMissingElements2(struct Array arr)
     int l = Min(arr);
     int h = Max(arr);
     int *H;
-    // Allocate x number of elements for hash table based on largest element h in arr
-    // h is the size of the hash table
-    // h+1 so H hash table has highest element number from arr as an index
+    // Allocate x number of elements for Hash Table based on largest element h in arr
+    // h is the size of the Hash Table
+    // h+1 so H Hash Table has highest element number from arr as an index
     H = (int *)malloc((h+1)*sizeof(int));
     for(int i = 0; i <= h; i++)
     {
         H[i] = 0;
     }
 
-    // mark each found element in arr in hash table with 1 for it exists
+    // mark each found element in arr in Hash Table with 1 for it exists
     for(int i = 0; i < arr.length; i++)
     {
         H[arr.A[i]]++;
@@ -784,6 +784,82 @@ void FindMissingElements2(struct Array arr)
         if(H[i] == 0)
         {
             printf("%d\n", i);
+        }
+    }
+}
+
+// Find Duplicate Elements
+// Keep a copy of the last duplicate element, traverse the array
+// check if current element equals next element and last duplicate
+// does not equal current element, if true, then print duplicate
+// and update found duplicate.
+// Time Complexity: O(n)
+void FindDuplicateElements(struct Array arr)
+{
+    int lastDuplicate = 0;
+    // arr.length-1 since we check the 2nd to last element against the last element
+    for(int i = 0; i < arr.length-1; i++)
+    {
+        if(arr.A[i] == arr.A[i+1] && arr.A[i] != lastDuplicate)
+        {
+            printf("%d\n", arr.A[i]);
+            lastDuplicate = arr.A[i];
+        }
+    }
+}
+
+// Count Duplicate Elements
+// Traverse the array, check if current element equals next element if true,
+// then set j pointer one ahead of i, loop while next element at j index equals
+// current element at index i and increment j. Break from loop, print duplicate
+// number is appearing x amount of times. i jumps to the index right before j
+// Time Complexity: O(n)
+void CountDuplicateElements(struct Array arr)
+{
+    for(int i = 0; i < arr.length; i++)
+    {
+        if(arr.A[i] == arr.A[i+1])
+        {
+            int j = i + 1;
+            // loop is neglible toward time since we don't traverse all elements
+            // just a part of the array and i jumps to the index right before j 
+            while(arr.A[j] == arr.A[i]) j++;
+            printf("%d is appearing %d times\n", arr.A[i], j-i);
+            i = j - 1;
+        }
+    }
+}
+
+// Find and Count Duplicates using Hash Table
+// How much work are we doing?
+// Scan through the n elements in array only 1 time
+// and while scanning we are marking the elements in the Hash Table
+// that is we are incrementing the counts per element.
+// incrementing takes constant time since we can lookup element in Hash Table
+// Time Complexity: O(n)
+void CountDuplicateElements2(struct Array arr)
+{
+    int h = Max(arr);
+    // Hash Table size is based on highest number in arr plus 1, so we
+    // include the highest number as an index in our Hash Table
+    int *H = (int *)malloc((h+1) * sizeof(int));
+
+    for(int i = 0; i <= h; i++)
+    {
+        H[i] = 0;
+    }
+
+    // Traverse array and increment the counts per element in hash table
+    for(int i = 0; i < arr.length; i++)
+    {
+        H[arr.A[i]]++;
+    }
+
+    for(int i = 0; i <= h; i++)
+    {
+        if(H[i] > 1)
+        {
+            printf("%d is appearing %d times\n", i, H[i]);
         }
     }
 }

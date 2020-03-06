@@ -140,22 +140,22 @@ int SetMembership(struct Array arr, int key);
 // Challenges
 
 // Find Single Missing Element
-// Prerequisite: Sort Array if not sorted
 void FindMissingElement(struct Array arr);
 
-// Find Single or Multiple Missing Elements in a sorted array and the sequence of
-// elements maybe starting from 1 onwards maybe starting from any other number
-// Prerequisite: Sort Array if not sorted
+// Find Single or Multiple Missing Elements in a sorted array
 void FindMissingElements(struct Array arr);
 
 
-// Take an array equal to the max element you have in the sequence that is
-// the size. Ex: 12 is largest element in first array, then size of new array
-// is 12. The first array will be traversed, each element will be looked up in
-// in the hash table, then 0 will be changed to 1. We come back to hash table
-// traverse it to look for the hash table's elements that equal 0, those are the
-// missing element(s)
+// Find Single or Multiple Missing Elements in a sorted array using Hash Table
 void FindMissingElements2(struct Array arr);
 
+// Find Duplicate Elements
+void FindDuplicateElements(struct Array arr);
+
+// Count Duplicate Elements
+void CountDuplicateElements(struct Array arr);
+
+// Find and Count Duplicates using Hash Table
+void CountDuplicateElements2(struct Array arr);
 
 #endif
