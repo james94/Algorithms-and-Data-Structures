@@ -137,4 +137,16 @@ struct Array* Difference(struct Array *arr1, struct Array *arr2);
 // Set uses Binary Search to know whether an element belongs to a Set or Not.
 int SetMembership(struct Array arr, int key);
 
+// Challenges
+
+// Find Single Missing Element
+// Prerequisite: Sort Array if not sorted
+void FindMissingElement(struct Array arr);
+
+// Find Single or Multiple Missing Elements in a sorted array and the sequence of
+// elements maybe starting from 1 onwards maybe starting from any other number
+// Prerequisite: Sort Array if not sorted
+void FindMissingElements(struct Array arr);
+
+
 #endif

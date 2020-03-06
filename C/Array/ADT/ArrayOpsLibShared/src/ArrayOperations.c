@@ -702,3 +702,51 @@ int SetMembership(struct Array arr, int key)
     // returns -1 when key element not found
     return -1;
 }
+
+// Challenges
+
+// Find Single Missing Element
+// Prerequisite: Sort Array if not sorted
+// Time Complexity: O(n)
+void FindMissingElement(struct Array arr)
+{
+    int l = arr.A[0];
+    int h = arr.A[arr.length-1];
+    int diff = l - 0;
+    for(int i = 0; i < arr.length-1; i++)
+    {
+        // found missing element
+        if(arr.A[i] - i != diff)
+        {
+            printf("%d\n", i+diff);
+            break;
+        }
+    }
+}
+
+// Find Multiple Missing Elements in a sorted array
+// and the sequence of elements maybe starting from 1 onwards
+// maybe starting from any other number
+// Prerequisite: Sort Array if not sorted
+// Time Complexity: O(n)
+void FindMissingElements(struct Array arr)
+{
+    int l = arr.A[0];
+    int h = arr.A[arr.length-1];
+    int diff = l - 0;
+    for(int i = 0; i < arr.length-1; i++)
+    {
+        // found missing element(s)
+        if(arr.A[i] - i != diff)
+        {
+            // accesses all elements missing any element, prints them
+            // don't have to consider time of the loop since its neglible
+            // it is filling up the gaps of missing elements
+            while(diff < arr.A[i] - i)
+            {
+                printf("%d\n", i + diff);
+                diff++;
+            }
+        }
+    }
+}
