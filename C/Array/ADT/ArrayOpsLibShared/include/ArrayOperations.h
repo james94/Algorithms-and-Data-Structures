@@ -149,4 +149,13 @@ void FindMissingElement(struct Array arr);
 void FindMissingElements(struct Array arr);
 
 
+// Take an array equal to the max element you have in the sequence that is
+// the size. Ex: 12 is largest element in first array, then size of new array
+// is 12. The first array will be traversed, each element will be looked up in
+// in the hash table, then 0 will be changed to 1. We come back to hash table
+// traverse it to look for the hash table's elements that equal 0, those are the
+// missing element(s)
+void FindMissingElements2(struct Array arr);
+
+
 #endif

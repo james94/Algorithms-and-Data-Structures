@@ -713,7 +713,7 @@ void FindMissingElement(struct Array arr)
     int l = arr.A[0];
     int h = arr.A[arr.length-1];
     int diff = l - 0;
-    for(int i = 0; i < arr.length-1; i++)
+    for(int i = 0; i < arr.length; i++)
     {
         // found missing element
         if(arr.A[i] - i != diff)
@@ -734,7 +734,7 @@ void FindMissingElements(struct Array arr)
     int l = arr.A[0];
     int h = arr.A[arr.length-1];
     int diff = l - 0;
-    for(int i = 0; i < arr.length-1; i++)
+    for(int i = 0; i < arr.length; i++)
     {
         // found missing element(s)
         if(arr.A[i] - i != diff)
@@ -747,6 +747,43 @@ void FindMissingElements(struct Array arr)
                 printf("%d\n", i + diff);
                 diff++;
             }
+        }
+    }
+}
+
+// Take an array equal to the max element you have in the sequence that is
+// the size. Ex: 12 is largest element in first array, then size of new array
+// is 12. The first array will be traversed, each element will be looked up in
+// in the hash table, then 0 will be changed to 1. We come back to hash table
+// traverse it to look for the hash table's elements that equal 0, those are the
+// missing element(s)
+// Time Complexity: O(n)
+void FindMissingElements2(struct Array arr)
+{
+    int l = Min(arr);
+    int h = Max(arr);
+    int *H;
+    // Allocate x number of elements for hash table based on largest element h in arr
+    // h is the size of the hash table
+    // h+1 so H hash table has highest element number from arr as an index
+    H = (int *)malloc((h+1)*sizeof(int));
+    for(int i = 0; i <= h; i++)
+    {
+        H[i] = 0;
+    }
+
+    // mark each found element in arr in hash table with 1 for it exists
+    for(int i = 0; i < arr.length; i++)
+    {
+        H[arr.A[i]]++;
+    }
+
+    // find missing element(s)
+    for(int i = l; i <= h; i++)
+    {
+        if(H[i] == 0)
+        {
+            printf("%d\n", i);
         }
     }
 }
