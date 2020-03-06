@@ -14,5 +14,11 @@ int main()
     printf("\nFind Multiple Missing Elements:\n");
     FindMissingElements(arr2);
 
+    int numbers3[] = {3,7,4,9,12,6,1,11,2,10};
+    struct Array arr3 = {numbers3,13,10};
+    Display(arr3);
+    printf("\nFind Multiple Missing Elements via Method 2:\n");
+    FindMissingElements2(arr3);
+
     return 0;
 }
