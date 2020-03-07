@@ -158,4 +158,10 @@ void CountDuplicateElements(struct Array arr);
 // Find and Count Duplicates using Hash Table
 void CountDuplicateElements2(struct Array arr);
 
+// Find and Count Duplicate Elements in Unsorted Array using Brute Force
+void CountDuplicateElementsUA(struct Array arr);
+
+// Find and Count Duplicate Elements in Unsorted Array using Hash Table
+void CountDuplicateElementsUA2(struct Array arr);
+
 #endif

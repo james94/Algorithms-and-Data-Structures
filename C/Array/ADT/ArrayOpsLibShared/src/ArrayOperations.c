@@ -863,3 +863,72 @@ void CountDuplicateElements2(struct Array arr)
         }
     }
 }
+
+// Finding and Counting Duplicate Elements in Unsorted Array
+
+// Find and Count Duplicate Elements in Unsorted Array using Brute Force
+// To find a duplicate element, start with the count at 1 and an element at 
+// index i, then compare it with the rest of the elements and when a 
+// duplicate appears, set index j to one ahead of index i, then increment 
+// count and mark that duplicate with -1, so we don't check it for duplicate 
+// elements. When index j reaches end of array, check is count > 1, if true,
+// print duplicate element d appears d times
+// Time Complexity: O(n^2)
+void CountDuplicateElementsUA(struct Array arr)
+{
+    for(int i = 0; i < arr.length-1; i++)
+    {
+        int count = 1;
+        if(arr.A[i] != -1)
+        {
+            for(int j = i+1; j < arr.length; j++)
+            {
+                if(arr.A[i] == arr.A[j])
+                {
+                    count++;
+                    arr.A[j] = -1;
+                }
+            }
+            if(count > 1)
+            {
+                printf("%d is appearing %d times\n", arr.A[i], count);
+            }
+        }
+    }
+}
+
+// Find and Count Duplicate Elements in Unsorted Array using Hash Table
+// The size of the Hash Table array should be equal to the largest element in our
+// input array. If the largest element is 8, we want to make sure our last index
+// of our Hash Table is 8, so the Hash Table size is 8+1 = 9 for 0...8 indices.
+// Scan through the input array and for each element, increment the count in the
+// Hash Table. Next, we scan through the Hash Table, wherever the value is > 0,
+// an element is present there and if value is > 1, then a duplicate is there
+void CountDuplicateElementsUA2(struct Array arr)
+{
+    // Find, count and display duplicate elements
+    int l = Min(arr);
+    int h = Max(arr);
+    // Hash Table size equals the largest element in arr plus 1, so we include the
+    // largest element as an index in our Hash Table
+    int *H = (int *)malloc((h+1)*sizeof(int));
+
+    for(int i = 0; i <= h; i++)
+    {
+        H[i] = 0;
+    }
+
+    // Traverse array and increment the counts per element in Hash Table
+    for(int i = 0; i < arr.length; i++)
+    {
+        H[arr.A[i]]++;
+    }
+
+    for(int i = 0; i <= h; i++)
+    {
+        if(H[i] > 1)
+        {
+            printf("%d is appearing %d times\n", i, H[i]);
+        }
+    }
+}
