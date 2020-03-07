@@ -932,3 +932,104 @@ void CountDuplicateElementsUA2(struct Array arr)
         }
     }
 }
+
+// Find a Pair with Sum Target (a+b=target) in Unsorted Array using Brute Force
+// Time Complexity: O(n^2)
+// n-1 + n-2 + ... + 3 + 2 + 1 = n(n-1)/2 = O(n^2)
+// Start with element at index i, check is there another element
+// at index j = i+1 that when summed is equal to the target.
+// If false, keep incrementing j until a match is found or 
+// reached end of array, then increment i and check j again.
+// Repeat this sequence until either a match is found or not.
+// If match found, print it.
+void FindPairSumTarget(struct Array arr, int target)
+{
+    for(int i = 0; i < arr.length-1; i++)
+    {
+        for(int j = i+1; j < arr.length; j++)
+        {
+            if(arr.A[i] + arr.A[j] == target)
+            {
+                printf("%d + %d = %d\n", arr.A[i], arr.A[j], target);
+                break;
+            }
+        }
+    }
+}
+
+// Find a Pair with Sum Target (a+b=target) in Unsorted Array using Hash Table 
+// Time Complexity: O(n)
+// Traverse all elements in array arr, lookup target - element[i]
+// in Hash Table to see if it doesn not equal 0, if true, then we found
+// our second element that sums with element[i] to equal our target.
+// Then print the pair sum to the screen.
+// This algorithm is faster than brute force. If you want to save time,
+// then the space taken will be more and vise versa.
+void FindPairSumTargetHT(struct Array arr, int target)
+{
+    int h = Max(arr);
+    int *H = (int *)malloc((h+1)*sizeof(int));
+    for(int i = 0; i < arr.length; i++)
+    {
+        if(H[target-arr.A[i]] != 0)
+        {
+            printf("%d + %d = %d\n", arr.A[i], target-arr.A[i], target);
+        }
+        H[arr.A[i]]++;
+    }
+}
+
+// Find a Pair with Sum Target (a+b=target) in Sorted Array
+// Time Complexity: O(n)
+// Start index i at first element and index j at last element.
+// check is sum of i's element and j's element equal to target,
+// if true, then print and increment i, decrement j. If false,
+// check is sum < target, if true, then increment i.
+// else decrement j.
+void FindPairSumTarget2(struct Array arr, int target)
+{
+    int i = 0, j = arr.length - 1;
+    while(i < j)
+    {
+        if(arr.A[i] + arr.A[j] == target)
+        {
+            printf("%d + %d = %d\n", arr.A[i], arr.A[j], target);
+            i++;
+            j--;
+        }
+        else if(arr.A[i] + arr.A[j] < target)
+        {
+            i++;
+        }
+        else
+        {
+            j--;
+        }
+        
+    }
+}
+
+// Find Max and Min in a Single Scan
+// Time Complexity: O(n)
+// Best Compilation = n-1; 10,9,8,7,2,1
+// Worst Compilation = 2(n-1); 1,2,3,5,8,9,10
+// Traverse the array, check is current element < minimum, if true
+// update minimum. if false, check is current element > maximum,
+// if true update maximum, else continue traversing array until end.
+void FindMaxMinSingleScan(struct Array arr, int *min, int *max)
+{
+    *min = arr.A[0];
+    *max = arr.A[0];
+
+    for(int i = 1; i < arr.length; i++)
+    {
+        if(arr.A[i] < *min)
+        {
+            *min = arr.A[i];
+        }
+        else if(arr.A[i] > *max)
+        {
+            *max = arr.A[i];
+        }
+    }
+}

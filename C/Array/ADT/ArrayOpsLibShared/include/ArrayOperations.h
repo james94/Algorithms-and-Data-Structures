@@ -145,7 +145,6 @@ void FindMissingElement(struct Array arr);
 // Find Single or Multiple Missing Elements in a sorted array
 void FindMissingElements(struct Array arr);
 
-
 // Find Single or Multiple Missing Elements in a sorted array using Hash Table
 void FindMissingElements2(struct Array arr);
 
@@ -163,5 +162,17 @@ void CountDuplicateElementsUA(struct Array arr);
 
 // Find and Count Duplicate Elements in Unsorted Array using Hash Table
 void CountDuplicateElementsUA2(struct Array arr);
+
+// Find a Pair with Sum Target (a+b=target) in Unsorted Array using Brute Force
+void FindPairSumTarget(struct Array arr, int target);
+
+// Find a Pair with Sum Target (a+b=target) in Unsorted Array using Hash Table 
+void FindPairSumTargetHT(struct Array arr, int target);
+
+// Find a Pair with Sum Target (a+b=target) in Sorted Array
+void FindPairSumTarget2(struct Array arr, int target);
+
+// Find Max and Min in a Single Scan
+void FindMaxMinSingleScan(struct Array arr, int *min, int *max);
 
 #endif
