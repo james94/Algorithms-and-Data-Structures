@@ -86,7 +86,12 @@ scanf("%s", name1);
 gets(name);
 ~~~
 
-
 ## Operations
 
 1. [FindLength()](UsesStringOpsLib/FindLength/src/main.c)
+
+2. [ChangeCaseToUpper()](UsesStringOpsLib/ChangeCaseOfString/src/main.c)
+
+3. [ChangeCaseToLower()](UsesStringOpsLib/ChangeCaseOfString/src/main.c)
+
+4. [ToggleCase()](UsesStringOpsLib/ChangeCaseOfString/src/main.c)
