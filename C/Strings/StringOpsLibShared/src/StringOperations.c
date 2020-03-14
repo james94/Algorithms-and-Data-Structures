@@ -56,3 +56,53 @@ void ToggleCase(char *s)
         }
     }
 }
+
+// Count Words
+int CountWords(char *s)
+{
+    // increment word count as long as there is a space that separates 
+    // words and that the previous character is not a space for whitespace
+    int word = 1;
+    for(int i = 0; s[i] != '\0'; i++)
+    {
+        if(s[i] == ' '  && s[i-1] != ' ')
+        {
+            word++;
+        }
+    }
+    return word;
+}
+
+// Count Vowels
+int CountVowels(char *s)
+{
+    int vowel = 0;
+    for(int i = 0; s[i] != '\0'; i++)
+    {
+        if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U')
+        {
+            vowel++;
+        }
+    }
+    return vowel;
+}
+
+// Count Consonants
+int CountConsonants(char *s)
+{
+    int consonant = 0;
+    for(int i = 0; s[i] != '\0'; i++)
+    {
+        // is it a vowel
+        if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U')
+        {
+
+        }
+        // else is it a consonant 
+        else if((s[i] >= 65 && s[i] <= 90) || (s[i] >= 97 && s[i] <= 122))
+        {
+            consonant++;
+        }
+    }
+    return consonant;
+}

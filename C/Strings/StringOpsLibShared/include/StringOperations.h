@@ -13,4 +13,13 @@ void ChangeCaseToLower(char *s);
 // Toggle case of String
 void ToggleCase(char *s);
 
+// Count Words
+int CountWords(char *s);
+
+// Count Vowels
+int CountVowels(char *s);
+
+// Count Consonant
+int CountConsonants(char *s);
+
 #endif
