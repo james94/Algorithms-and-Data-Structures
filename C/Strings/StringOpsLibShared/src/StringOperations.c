@@ -119,11 +119,19 @@ bool Valid(char *s)
     return true;
 }
 
-// Reverse a String
-void Reverse(char *s, char *r)
+// Swap
+void swap(char *s1, char *s2)
+{
+    char t = *s1;
+    *s1 = *s2;
+    *s2 = t;
+}
+
+// Method 1: Reverse a String
+void Reverse1(char *s, char *r)
 {
     int i, j;
-    // go to last char in s string
+    // get lenght of string s
     for(i = 0; s[i] != '\0'; i++)
     {
     }
@@ -134,5 +142,20 @@ void Reverse(char *s, char *r)
         r[j] = s[i];
     }
     r[j] = '\0';
+}
+
+// Method 2: Reverse a String
+void Reverse2(char *s)
+{
+    int i, j;
+    for(j = 0; s[j] != '\0'; j++)
+    {
+    }
+    
+    j = j-1;
+    for(i = 0; i < j; i++, j--)
+    {
+        swap(&s[i], &s[j]);
+    }
 }
 

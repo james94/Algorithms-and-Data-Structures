@@ -29,7 +29,13 @@ int CountConsonants(char *s);
 // Check is String Valid
 bool Valid(char *s);
 
-// Reverse a String
-void Reverse(char *s, char *r);
+// Swap
+void swap(char *s1, char *s2);
+
+// Method 1: Reverse a String
+void Reverse1(char *s, char *r);
+
+// Method 2: Reverse a String
+void Reverse2(char *s);
 
 #endif
