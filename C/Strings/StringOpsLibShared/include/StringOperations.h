@@ -1,6 +1,10 @@
 #ifndef STRING_H
 #define STRING_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
 // Find Length of a String
 void FindLength(char *s);
 
@@ -21,5 +25,11 @@ int CountVowels(char *s);
 
 // Count Consonant
 int CountConsonants(char *s);
+
+// Check is String Valid
+bool Valid(char *s);
+
+// Reverse a String
+void Reverse(char *s, char *r);
 
 #endif

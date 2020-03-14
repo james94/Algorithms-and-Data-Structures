@@ -1,9 +1,5 @@
 #include "StringOperations.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-
 void FindLength(char *s)
 {
     int i;
@@ -106,3 +102,37 @@ int CountConsonants(char *s)
     }
     return consonant;
 }
+
+// Check is String Valid
+bool Valid(char *s)
+{
+    for(int i = 0; s[i] != '\0'; i++)
+    {
+        // check is character invalid not A-Z, a-z, 0-9?
+        if(!(s[i] >= 65 && s[i] <= 90) &&
+           !(s[i] >= 97 && s[i] <= 122) &&
+           !(s[i] >= 48 && s[i] <= 57))
+           {
+               return false;
+           }
+    }
+    return true;
+}
+
+// Reverse a String
+void Reverse(char *s, char *r)
+{
+    int i, j;
+    // go to last char in s string
+    for(i = 0; s[i] != '\0'; i++)
+    {
+    }
+    i = i-1; // go to 2nd to last char before '\0'
+    // store reverse s string into r string
+    for(j = 0; i >= 0; i--, j++)
+    {
+        r[j] = s[i];
+    }
+    r[j] = '\0';
+}
+
