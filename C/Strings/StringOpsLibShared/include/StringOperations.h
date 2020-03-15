@@ -38,4 +38,19 @@ void Reverse1(char *s, char *r);
 // Method 2: Reverse a String
 void Reverse2(char *s);
 
+// Method 1: Compare Strings and Don't Ignore Case. Ex: p|P is different
+void Compare1(char *s1, char *s2);
+
+// Method 2: Compare Strings and Ignore Case. Ex: p|P is p
+void Compare2(char *s1, char *s2);
+
+// Method 1: use two arrays to check if first array is palindrome
+// String is Palindrome if you reverse the string, string remains same
+void IsPalindrome1(char *s1, char *s2);
+
+// Method 2: use one array to check if it is a palindrome
+// String is Palindrome if both indices from opposite sides reach array 
+// center and each element was the same
+void IsPalindrome2(char *s);
+
 #endif
