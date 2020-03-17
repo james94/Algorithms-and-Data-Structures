@@ -53,4 +53,14 @@ void IsPalindrome1(char *s1, char *s2);
 // center and each element was the same
 void IsPalindrome2(char *s);
 
+// Find Duplicate Characters in a String
+
+// Method 1: Compare with Other Letters and Count when Duplicate
+void CountDuplicateCharacters(char *s);
+
+// Method 2: Using Hash Table or Counting
+void CountDuplicateCharacters2(char *s);
+
+// Method 3: Using Bits
+
 #endif

@@ -291,3 +291,60 @@ void IsPalindrome2(char *s)
         printf("s1 is not a palindrome.\n");
     }
 }
+
+// Find Duplicate Characters in a String
+
+// Method 1: Compare with Other Letters
+// Find and Count Duplicate Characters in Unsorted C-String using Brute Force
+// Deals with lower case letters
+void CountDuplicateCharacters(char *s)
+{
+    for(int i = 0; s[i] != '\0'; i++)
+    {
+        int count = 1;
+        if(s[i] != -1)
+        {
+            for(int j = i+1; s[j] != '\0'; j++)
+            {
+                if(s[i] == s[j])
+                {
+                    count++;
+                    s[j] = -1;
+                }
+            }
+            if(count > 1)
+            {
+                printf("%c is appearing %d times\n", s[i], count);
+            }
+        }
+    }
+}
+
+// Method 2: Using Hash Table or Counting
+// Find and Count Duplicate Characters in Unsorted C-String using Hash Table
+// Deals with lower case letters
+void CountDuplicateCharacters2(char *s)
+{
+    // Create Hash Table of 26, that many letters in alphabet
+    int H[26], i;
+
+    for(i = 0; i < 26; i++)
+    {
+        H[i] = 0;
+    }
+
+    // Increment character index with 1 in hash table
+    // 97 = 'a', if s[i] = 'a', then s[i]-97 = 0, index in table
+    for(i = 0; s[i] != '\0'; i++)
+    {
+        H[s[i]-97] += 1;
+    }
+
+    for(i = 0; i < 26; i++)
+    {
+        if(H[i] > 1)
+        {
+            printf("%c is appearing %d times\n", i+97, H[i]);
+        }
+    }
+}
