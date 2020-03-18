@@ -1,13 +1,14 @@
 #include "StringOperations.h"
 
-void FindLength(char *s)
+int FindLength(char *s)
 {
     int i;
     for(i = 0; s[i] != '\0'; i++)
     {
 
     }
-    printf("Length is %d\n", i);
+    // printf("Length is %d\n", i);
+    return i;
 }
 
 // Change case of String to Upper Case
@@ -326,12 +327,7 @@ void CountDuplicateCharacters(char *s)
 void CountDuplicateCharacters2(char *s)
 {
     // Create Hash Table of 26, that many letters in alphabet
-    int H[26], i;
-
-    for(i = 0; i < 26; i++)
-    {
-        H[i] = 0;
-    }
+    int H[26] = {0}, i;
 
     // Increment character index with 1 in hash table
     // 97 = 'a', if s[i] = 'a', then s[i]-97 = 0, index in table
@@ -371,5 +367,91 @@ void CountDuplicateCharacters3(char *s)
             H = x | H;
         }
         
+    }
+}
+
+// Method 1:  Check if 2 Strings are Anagram using Brute Force
+// Compare 1st String letter with 2nd String letter, if equal,
+// mark it, so we don't check that particular element in 2nd String
+// Finish traversing 1st String, if all elements in 2nd String marked
+// with -1, it's an Anagram. Brute Force also deals with duplicates.
+// Time Complexity: O(n^2)
+void IsAnagram1(char *s1, char *s2)
+{
+    // Are they equal length
+    int s1_length = FindLength(s1);
+    int s2_length = FindLength(s2);
+    if(s1_length != s2_length)
+    {
+        printf("Not Anagram\n");
+        return;
+    }
+
+    int i, j;
+    for(i = 0; s1[i] != '\0'; i++)
+    {
+        for(j = 0; s2[i] != '\0'; j++)
+        {
+            // Found match, Mark visited letter in s2
+            if(s1[i] == s2[j])
+            {
+                s2[j] = -1;
+                break; // go to outer loop, next letter s1
+            }
+        }
+    }
+
+    for(i = 0; s2[i] != '\0'; i++)
+    {
+        if(s2[i] != -1)
+        {
+            printf("Not Anagram\n");
+            break;
+        }
+    }
+
+    if(s1[i] == '\0')
+    {
+        printf("It's an Anagram\n");
+    }
+}
+
+// Method 2: Check if 2 Strings are Anagram using Hash Table
+// For 1st String, increment in Hash Table, For 2nd String, decrement
+// in Hash Table. If Hash Table element is negative, not an Anagram.
+// If we've reached end of 2nd String, then it's an Anagram.
+// Hash Table good at dealing with duplicates
+// Time Complexity: O(n)
+void IsAnagram2(char *s1, char *s2)
+{
+    int i, H[26] = {0};
+
+    // Are they equal length
+    int s1_length = FindLength(s1);
+    int s2_length = FindLength(s2);
+    if(s1_length != s2_length)
+    {
+        printf("Not Anagram\n");
+        return;
+    }
+
+    for(i = 0; s1[i] != '\0'; i++)
+    {
+        H[s1[i]-97] += 1;
+    }
+
+    for(i = 0; s2[i] != '\0'; i++)
+    {
+        H[s2[i]-97] -= 1;
+        if(H[s2[i]-97] < 0)
+        {
+            printf("Not Anagram\n");
+            break;
+        }
+    }
+
+    if(s2[i] == '\0')
+    {
+        printf("It's an Anagram\n");
     }
 }

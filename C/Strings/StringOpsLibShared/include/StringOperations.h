@@ -7,7 +7,7 @@
 #include <stdbool.h>
 
 // Find Length of a String
-void FindLength(char *s);
+int FindLength(char *s);
 
 // Change case of String to Upper Case
 void ChangeCaseToUpper(char *s);
@@ -64,5 +64,15 @@ void CountDuplicateCharacters2(char *s);
 
 // Method 3: Using Bitwise Operations
 void CountDuplicateCharacters3(char *s);
+
+// Check if 2 Strings are an Anagram?
+// Note: You can check if 2 Strings are Anagram, if they are not 
+// having duplicates, then we could use Bit SET too.
+
+// Method 1: Check if 2 Strings are Anagram using Brute Force
+void IsAnagram1(char *s1, char *s2);
+
+// Method 2: Check if 2 Strings are Anagram using Hash Table
+void IsAnagram2(char *s1, char *s2);
 
 #endif
