@@ -3,6 +3,6 @@
 int main()
 {
     char *s = "welcome";
-    FindLength(s);
+    printf("Length is %d\n", FindLength(s));
     return 0;
 }
