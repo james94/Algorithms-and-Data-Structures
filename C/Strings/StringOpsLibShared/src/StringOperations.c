@@ -348,3 +348,28 @@ void CountDuplicateCharacters2(char *s)
         }
     }
 }
+
+// Method 3: Using Bitwise Operations
+// Find and Count Duplicate Characters in Unsorted C-String using Bits
+// Deals with lower case letters
+void CountDuplicateCharacters3(char *s)
+{
+    int32_t H = 0;
+    int32_t x = 0;
+    
+    for(int32_t i = 0; s[i] != '\0'; i++)
+    {
+        x = 1;
+        x = x << s[i]-97;
+
+        if((x & H) > 0)
+        {
+            printf("%c is a Duplicate\n", s[i]);
+        }
+        else
+        {
+            H = x | H;
+        }
+        
+    }
+}

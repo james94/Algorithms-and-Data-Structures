@@ -2,6 +2,7 @@
 #define STRING_H
 
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
@@ -58,9 +59,10 @@ void IsPalindrome2(char *s);
 // Method 1: Compare with Other Letters and Count when Duplicate
 void CountDuplicateCharacters(char *s);
 
-// Method 2: Using Hash Table or Counting
+// Method 2: Using Hash Table and Counting
 void CountDuplicateCharacters2(char *s);
 
-// Method 3: Using Bits
+// Method 3: Using Bitwise Operations
+void CountDuplicateCharacters3(char *s);
 
 #endif
