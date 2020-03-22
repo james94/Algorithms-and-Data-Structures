@@ -75,4 +75,12 @@ void IsAnagram1(char *s1, char *s2);
 // Method 2: Check if 2 Strings are Anagram using Hash Table
 void IsAnagram2(char *s1, char *s2);
 
+// Permutation: Finds all arrangements for a string
+
+// Method 1: Find all permutations of a string using Recursive Brute Force
+void PermutationString1(char *s, int k);
+
+// Method 2: Find all permutations of a string using Recursive Swapping
+void PermutationString2(char *s, int l, int h);
+
 #endif

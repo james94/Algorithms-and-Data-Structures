@@ -455,3 +455,49 @@ void IsAnagram2(char *s1, char *s2)
         printf("It's an Anagram\n");
     }
 }
+
+// Method 1: Find all permutations of a string using Recursive Brute Force
+void PermutationString1(char *s, int k)
+{
+    static int A[10] = {0};
+    static char Res[10];
+    int i;
+
+    if(s[k] == '\0')
+    {
+        Res[k] = '\0';
+        printf("%s\n", Res);
+    }
+    else
+    {
+        for(i = 0; s[i] != '\0'; i++)
+        {
+            if(A[i] == 0)
+            {
+                Res[k] = s[i];
+                A[i] = 1;
+                PermutationString1(s, k+1);
+                A[i] = 0;
+            }
+        }
+    } 
+}
+
+// Method 2: Find all permutations of a string using Recursive Swapping
+void PermutationString2(char *s, int l, int h)
+{
+    int i;
+    if(l == h)
+    {
+        printf("%s", s);
+    }
+    else
+    {
+        for(i = l; i <= h; i++)
+        {
+            swap(s[l], s[i]);
+            PermutationString2(s, l+1, h);
+            swap(s[l], s[i]);
+        }
+    }
+}
