@@ -95,3 +95,35 @@ gets(name);
 3. [ChangeCaseToLower()](UsesStringOpsLib/ChangeCaseOfString/src/main.c)
 
 4. [ToggleCase()](UsesStringOpsLib/ChangeCaseOfString/src/main.c)
+
+5. [CountWords()](UsesStringOpsLib/CountWordsVowelsC/src/main.c)
+
+6. [CountVowels()](UsesStringOpsLib/CountWordsVowelsC/src/main.c)
+
+7. [CountConsonants()](UsesStringOpsLib/CountWordsVowelsC/src/main.c)
+
+8. [Valid()](UsesStringOpsLib/ValidateString/src/main.c)
+
+9. [Reverse()](UsesStringOpsLib/ReverseString/src/main.c)
+
+Note: This example shows two methods for reversing a string included in the String Operations lib. The first method uses two arrays and traverses the first array in reverse order storing each element into the second array in order. The second method uses swap to reverse string.
+
+10. [Compare()](UsesStringOpsLib/CompareStrings/src/main.c)
+
+Note: This example shows two methods for comparing if two strings are equal included in the String Operations lib. The first method compare strings and doesn't ignore case, so p is different than P. The second method compare strings and ignores case, so p and P are considered the same. 
+
+11. [IsPalindrome()](UsesStringOpsLib/IsPalindrome/src/main.c)
+
+Note: This example shows two methods for checking if a string is a palindrome included in the String Operations lib. The first method uses two arrays and checks if the reverse array equals the original array. The second method uses one array and checks if indices from opposite sides equal eachother until reaching the center.
+
+12. [CountDuplicateCharacters()](UsesStringOpsLib/FindCountDuplicates/src/main.c)
+
+Note: This example shows three methods for counting duplicate characters in a string included in the String Operations lib. The first method uses comparison, the second method uses hash table and the third method uses bitwise operations. Each method has in common that for each duplicate found, count it.
+
+13. [IsAnagram()](UsesStringOpsLib/IsAnagram/src/main.c)
+
+Note: This example shows two methods for checking if two strings are an anagram included in the String Operations lib. The first method uses brute force and the second method uses hash table to check that the second string contains the same letters as the first string.
+
+14. [PermutationString()](UsesStringOpsLib/PermutationString/src/main.c)
+
+Note: This example shows two methods for finding the all the permutations of a string included in the String Operations lib. The first method uses recursive brute force and the second method uses recursive swapping.
