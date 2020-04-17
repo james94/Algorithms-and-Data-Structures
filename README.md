@@ -1,66 +1,86 @@
 # Data Structures & Algorithms
 
-Learn, analyze and implement Data Structures using C and C++. Learn Recursion and Sorting.
+**Data Structures & Algorithms** is essential for building systems for Embedded Systems, Operating Systems, Robotics, Mobile Systems, Web Applications, Big Data, Cybersecurity, Medical Devices, Machine Learning and Artificial Intelligence. This repository holds the implementations of various Data Structures & Algorithms in a C, C++, Python, Java, R or JavaScript library. Additionally, sample applications are included for you to see how to use a particular Data Structure & Algorithm in your particular programming language.
 
-## Overview
+## Table of Contents
 
-I have already taken a Data Structures & Algorithms course at SJSU for undergrad in Computer Engineering.
-I decided to take this course on Udemy to gain a deeper understanding of Data Structures & Algorithms.
-My instructor on Udemy is Abdul Bari who has been teaching this course for a long period of time to university students.
-My goal with this course is to take what I learn and apply it to solving challenging coding problems on Leetcode. 
-I hope after completing this course, I will have a better time getting through the coding challenges that
-come up in interviews.
+- Features
+- Requirements
+- Getting Started
+- Documentation
+- License
+- Resources
 
-## Contents
+## Features
 
-- **README.md**: contains overview of the content available on this repo
-- **projects**: contains folders for Data Structures & Algorithms implemented in C, C++, Python, etc.
+This repository aims to show the user how to learn to implement Data Structures & Algorithms and use them in their own applications in an interactive way through online gaming.
 
-## Reflection
+### Library
 
-### C/C++ Essential Concepts
+- Array ADT
+- Linked List
+- Stack
+- Queue
+- Tree
+- Binary Search Tree
+- AVL Tree
+- Red Black Tree
+- Heap
+- Sorting Techniques
+- Hashing Technique
+- Graphs
 
-### Required Setup for Programming
+## Demo Applications
 
-### Introduction
+- Essentials
+- Recursion
+- Library
 
-### Recursion
+## Requirements
 
-### Array Representations
+- Build and usage currently only supports Windows 10 WSL, Linux and Mac OS X environments.
 
-### Array ADT
+### C, C++ Requirements
 
-### Matrices
+- gcc
+    - 7.4.0 or greater
+- g++
+    - 7.4.0 or greater
+- CMake
+    - 3.16.4 or greater
 
-### Sparse Matrix and Polynomial Representation
+### Python Requirements
 
-### Linked List
+- CMake
+    - 3.16.4 or greater
+- Python
+    - 3.7.4 or greater
 
-### Sparse Matrix and Polynomial using Linked List
+### Java Requirements
 
-### Stack
+- JDK
+    - 1.8 or greater
+- Gradle
+    - 6.3.0 or greater
 
-### Queues
+## Getting Started
 
-### Trees
+Choose your programming language:
 
-### Binary Search Trees
+- [C](C)
+- C++ (coming soon...)
+- Python (coming soon...)
+- Java (coming soon...)
+- R (coming soon...)
+- JavaScript (coming soon...)
 
-### AVL Trees
+## Documentation
 
-### Search Trees
+See **web link coming soon** for the latest documentation.
 
-### Heap
+## License
 
-### Sorting Techniques
-
-### Hashing Technique
-
-### Graphs
-
-## How to Run Sample Applications
-
-## Conclusion
+This software is licensed under the [MIT License](https://mit-license.org/)
 
 ## Resources
 
